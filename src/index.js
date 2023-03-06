@@ -32,7 +32,7 @@ const clearAllDone = document.createElement('div');
 clearAllDone.innerHTML = '<button class="delete-btn">Clear all completed</button>';
 list.appendChild(clearAllDone);
 
-function render() {
+const render = () => {
   const listUl = document.querySelector('table');
   listUl.innerHTML = '';
   arrList.forEach((task) => {
@@ -53,11 +53,11 @@ function render() {
 render();
 
 // ------ Helper functions------------
-function save() {
+const save = () => {
   localStorage.setItem(LOCAL_STORAGE_LIST_KEY, JSON.stringify(arrList));
 }
 
-function refresh() {
+const refresh = () => {
   const editInput = document.querySelectorAll('.editInput');
   const text = document.querySelectorAll('.text');
   text.forEach((label, index) => label.addEventListener('click', () => edit(label, index, arrList, save, editInput)));
