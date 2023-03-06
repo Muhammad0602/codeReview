@@ -43,10 +43,6 @@ h1 {
   transform: rotate(90deg);
 }
 
-.add-input:placeholder-shown {
-  font-style: italic;
-}
-
 .list-item {
   display: flex;
   align-items: center;
@@ -66,7 +62,8 @@ h1 {
   border-radius: 5px;
 }
 
-.editInput:placeholder-shown {
+.editInput:placeholder-shown,
+.add-input:placeholder-shown {
   font-style: italic;
 }
 
