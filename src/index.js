@@ -11,7 +11,6 @@ let arrList = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
 
 const list = document.querySelector('.my-list');
 
-// function populateTask() {
 const title = document.createElement('div');
 title.innerHTML = '<h3 class="title">Today\'s To Do <i class=\'fas fa-sync\'></i></h3>';
 title.classList.add('border-bottom');
@@ -32,7 +31,6 @@ list.appendChild(listUl);
 const clearAllDone = document.createElement('div');
 clearAllDone.innerHTML = '<button class="delete-btn">Clear all completed</button>';
 list.appendChild(clearAllDone);
-// }
 
 function render() {
   const listUl = document.querySelector('table');
@@ -84,7 +82,6 @@ deleteBtn.addEventListener('click', () => {
   save();
   render();
   window.location.reload();
-  // refresh();
 });
 
 listJS(arrList, render, save, refresh);
