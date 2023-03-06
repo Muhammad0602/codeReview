@@ -12,12 +12,12 @@ let arrList = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
 const list = document.querySelector('.my-list');
 
 const title = document.createElement('div');
-title.innerHTML = '<h3 class="title">Today\'s To Do <i class=\'fas fa-sync\'></i></h3>';
+title.innerHTML = '<h2 class="title">Today\'s To Do <i class=\'fas fa-sync\'></i></h2>';
 title.classList.add('border-bottom');
 list.appendChild(title);
 
 const addInput = document.createElement('div');
-addInput.innerHTML = `<form action="" id="add-form">
+addInput.innerHTML = `<form id="add-form">
   <input class="add-input" placeholder="Add to your list..."></input>
   <button class="add-btn"><i class="fas fa-level-down-alt"></i></button>
   </form>`;
@@ -49,19 +49,19 @@ const render = () => {
     listItem.classList.add('list-item');
     listUl.appendChild(listItem);
   });
-}
+};
 render();
 
 // ------ Helper functions------------
 const save = () => {
   localStorage.setItem(LOCAL_STORAGE_LIST_KEY, JSON.stringify(arrList));
-}
+};
 
 const refresh = () => {
   const editInput = document.querySelectorAll('.editInput');
   const text = document.querySelectorAll('.text');
   text.forEach((label, index) => label.addEventListener('click', () => edit(label, index, arrList, save, editInput)));
-}
+};
 
 refresh();
 //  -----------------Delete and check the task --------------------------
