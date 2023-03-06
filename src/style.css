@@ -43,6 +43,11 @@ h1 {
   transform: rotate(90deg);
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 .list-item {
   display: flex;
   align-items: center;

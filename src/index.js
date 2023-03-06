@@ -25,7 +25,7 @@ addInput.innerHTML = `<form id="add-form">
 addInput.classList.add('border-bottom');
 list.appendChild(addInput);
 
-const listUl = document.createElement('table');
+const listUl = document.createElement('ul');
 list.appendChild(listUl);
 
 const clearAllDone = document.createElement('div');
@@ -33,7 +33,7 @@ clearAllDone.innerHTML = '<button class="delete-btn">Clear all completed</button
 list.appendChild(clearAllDone);
 
 const render = () => {
-  const listUl = document.querySelector('table');
+  const listUl = document.querySelector('ul');
   listUl.innerHTML = '';
   arrList.forEach((task) => {
     const listItem = document.createElement('li');
